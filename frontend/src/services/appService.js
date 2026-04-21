@@ -1,0 +1,10 @@
+import api from './api'
+export const getMyApps  = ()       => api.get('/api/apps/user/my')
+export const getAllApps  = ()       => api.get('/api/apps')
+export const getApp      = (id)    => api.get(`/api/apps/${id}`)
+export const addApp      = (data)  => api.post('/api/apps', data)
+export const updateApp   = (id, d) => api.put(`/api/apps/${id}`, d)
+export const deleteApp   = (id)   => api.delete(`/api/apps/${id}`)
+export const togglePin   = (id)   => api.post(`/api/apps/user/pin/${id}`)
+export const launchApp   = (id)   => api.post(`/api/apps/${id}/launch`)
+export const hideApp = (id) => api.delete(`/api/apps/user/remove/${id}`)

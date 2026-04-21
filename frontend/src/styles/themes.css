@@ -1,0 +1,27 @@
+/* ── Thème sombre ── */
+[data-theme="dark"] {
+  --color-bg:      #1A1A2E;
+  --color-surface: #16213E;
+  --color-text:    #E2E8F0;
+}
+/* ── Thème clair (défaut) ── */
+[data-theme="light"] {
+  --color-bg:      #F7F8FC;
+  --color-surface: #FFFFFF;
+  --color-text:    #1A1A2E;
+}
+/* ── Sélecteur de thème ── */
+.theme-switcher {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--color-bg);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 4px 10px; border-radius: 20px;
+}
+.theme-dot {
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 2px solid transparent; cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s;
+}
+.theme-dot:hover, .theme-dot.active {
+  border-color: white; transform: scale(1.2);
+}

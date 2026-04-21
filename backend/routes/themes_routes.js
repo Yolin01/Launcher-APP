@@ -1,0 +1,10 @@
+const router     = require('express').Router()
+const ctrl       = require('../controllers/themes_controller')
+const { protect } = require('../middleware/auth_middleware')
+router.use(protect)
+router.get('/',               ctrl.getAll)
+router.post('/',              ctrl.create)
+router.put('/:id',           ctrl.update)
+router.delete('/:id',        ctrl.remove)
+router.put('/:id/activate',  ctrl.activate)
+module.exports = router
