@@ -1,4 +1,4 @@
-# AppLauncher 🚀
+# AppLauncher 
 
 > Lanceur d'applications de bureau avec système de thèmes personnalisables — développé avec Electron, React, Node.js et MongoDB.
 
